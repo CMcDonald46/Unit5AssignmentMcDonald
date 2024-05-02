@@ -28,7 +28,7 @@ $1
 Amount:0
 ____________________
 Subtotal: $0
-Tip: $20
+Tip: $2
 Tax: $0
-Total Due: $20
+Total Due: $2
 ____________________

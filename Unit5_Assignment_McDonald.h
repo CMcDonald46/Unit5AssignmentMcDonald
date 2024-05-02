@@ -11,7 +11,7 @@
 #include <fstream>
 
 using namespace std;
-
+// This is the class for MenuItem.
 class MenuItem
 {
 private:
@@ -84,7 +84,7 @@ void MenuItem::setCount(int count)
 {
     this->count = count;
 }
-
+// This function reads in the data from the data file and stores it in the vector.
 void populateMenu(vector<MenuItem> &entireMenu) 
 {
     // Put some default values in our Menu.
@@ -111,7 +111,7 @@ void populateMenu(vector<MenuItem> &entireMenu)
         entireMenu.push_back(item);
     }
 }
-
+// This function displays the menu to the user.
 void showMenu(vector<MenuItem> &m) {
     cout << "\x1b[1;33m";
     cout << fixed << setprecision(2); // Set doubles to 2 decimal places.
@@ -128,7 +128,7 @@ void showMenu(vector<MenuItem> &m) {
     }
     cout << "\x1b[0m";
 }
-
+// This Functoin allows for the user to order items from the menu.
 void acceptOrder(vector<MenuItem> &m, double &subtotal) 
 {
     char option = '\0'; // The user-selected menu item.
@@ -174,7 +174,7 @@ void acceptOrder(vector<MenuItem> &m, double &subtotal)
 
     cout << "\nThank you for placing your order." << endl;
 }
-
+// This is my function that includes the ability to tip pick a payment method, and print the reciept.
 void printReceipt(vector<MenuItem> &m, double &subtotal) 
 {
     double tip = 0.0;
@@ -210,7 +210,7 @@ void printReceipt(vector<MenuItem> &m, double &subtotal)
     cout << "Here's your receipt:" << endl;
   // So that my receipt can be show on the console and in the text file I made sure to include both.
   ofstream myfile ("Printed_Reciept.txt");
-  cout << "\x1b[1;33m"; // Character sequence for yello text.
+  cout << "\x1b[1;33m"; // Character sequence for yellow text.
   if (myfile.is_open()){
       myfile << "____________________" << endl;
       myfile << "RECEIPT" << endl;
@@ -252,6 +252,4 @@ void printReceipt(vector<MenuItem> &m, double &subtotal)
     cout << "____________________" << endl;
     myfile.close();}
   cout << "\x1b[1;0m"; // Character sequence for normal text.
-}
-
 }
