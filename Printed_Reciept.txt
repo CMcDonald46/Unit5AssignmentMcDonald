@@ -7,7 +7,7 @@ AMOUNT:
 ____________________
 Chicken Sandwich
 $5
-Amount:0
+Amount:5
 Chicken Salad
 $4
 Amount:0
@@ -27,8 +27,8 @@ Dr. Pepper
 $1
 Amount:0
 ____________________
-Subtotal: $0
-Tip: $2
-Tax: $0
-Total Due: $2
+Subtotal: $25
+Tip: $20
+Tax: $2.0625
+Total Due: $47.06
 ____________________
